@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <Router>
         <main>
-          <Link to="/"><h1>Artwork</h1></Link>
+          <Link to="/" className="title"><h1>ArtHub</h1></Link>
           <Route exact path="/" component={ArtworksIndex} />
         </main>
       </Router>
