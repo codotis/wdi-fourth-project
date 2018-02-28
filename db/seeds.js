@@ -1,8 +1,12 @@
 const mongoose   = require('mongoose');
 mongoose.Promise = require('bluebird');
+const { db, env } = require('../config/environment');
 
-const { dbURI } = require('../config/environment');
 const Artwork   = require('../models/artwork');
+
+mongoose.connect(db[env]);
+
+Artwork.collection.drop();
 
 const artworkData = [{
   title: 'Arrange',
@@ -36,11 +40,7 @@ const artworkData = [{
   description: 'Link wearing majoras mask'
 }];
 
-
-mongoose
-  .connect(dbURI, { useMongoClient: true })
-  .then(db => db.dropDatabase())
-  .then(() => Artwork.create(artworkData))
+Artwork.create(artworkData)
   .then(artworks => console.log(`${artworks.length} artworks created`))
   .catch(err => console.log(err))
   .finally(() => mongoose.connection.close());
