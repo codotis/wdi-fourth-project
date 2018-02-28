@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 class ArtworksIndex extends Component {
@@ -23,9 +23,9 @@ class ArtworksIndex extends Component {
           {this.state.artworks.map(artwork => <div key={artwork.id} className="col-sm-4">
             <div className="card">
               <img src={artwork.image}/>
-              {/* <Link to={`/artworks/${artwork.id}`}> */}
-              <h3 className="card">{artwork.title}</h3>
-              {/* </Link> */}
+              <Link to={`/artworks/${artwork.id}`}>
+                <h3 className="card">{artwork.title}</h3>
+              </Link>
             </div>
             <div>
             </div>
