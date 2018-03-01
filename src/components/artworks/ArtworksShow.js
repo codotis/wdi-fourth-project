@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
+import Auth from '../../lib/Auth';
 
 class ArtworksShow extends Component {
   state = {
@@ -7,6 +8,7 @@ class ArtworksShow extends Component {
   };
 
   componentDidMount() {
+    console.log(Auth.getPayload());
     Axios
       .get(`/api/artworks/${this.props.match.params.id}`)
       .then(res => this.setState({ artwork: res.data}))

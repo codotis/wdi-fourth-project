@@ -1,17 +1,21 @@
 const router = require('express').Router();
-// const secureRoute = require('../lib/secureRoute');
+const secureRoute = require('../lib/secureRoute');
 
 const artworks  = require('../controllers/artworks');
+const users  = require('../controllers/users');
 const auth  = require('../controllers/auth');
 
 router.route('/artworks')
   .get(artworks.index)
-  .post(artworks.create);
+  .post(secureRoute, artworks.create);
 
 router.route('/artworks/:id')
   .get(artworks.show)
-  .put(artworks.update)
-  .delete(artworks.delete);
+  .put(secureRoute, artworks.update)
+  .delete(secureRoute, artworks.delete);
+
+router.route('/users/:id')
+  .get(users.show);
 
 router.route('/register')
   .post(auth.register);

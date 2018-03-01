@@ -7,6 +7,12 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true }
 });
 
+userSchema.virtual('artworks', {
+  ref: 'Artwork',
+  localField: '_id',
+  foreignField: 'createdBy'
+});
+
 userSchema.set('toJSON', {
   getters: true,
   virtuals: true,

@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import ArtworksIndex from './components/artworks/ArtworksIndex';
 import ArtworksShow from './components/artworks/ArtworksShow';
+import UsersShow from './components/users/UsersShow';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Navbar from './components/utility/Navbar';
@@ -22,6 +23,7 @@ class App extends Component {
           <Link to="/" className="title"><h1>ArtHub</h1></Link>
           <Route exact path="/" component={ArtworksIndex} />
           <Route path="/artworks/:id" component={ArtworksShow} />
+          <Route path="/users/:id" component={UsersShow} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
         </main>
