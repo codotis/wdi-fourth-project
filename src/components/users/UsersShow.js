@@ -5,12 +5,12 @@ import Axios from 'axios';
 class UsersShow extends Component {
 
   state = {
-    user: ''
+    user: {}
   }
 
   componentDidMount() {
     Axios
-      .get(`/api/users/${this.props.match.params.userId}`)
+      .get(`/api/users/${this.props.match.params.id}`)
       .then(res => this.setState({ user: res.data }, console.log(res.data)))
       .catch(err => console.log(err));
   }
@@ -19,7 +19,9 @@ class UsersShow extends Component {
     return(
       <div>
         {this.state.user.username}
-        <p>text</p>
+        {this.state.user.artworks}
+        <p>test text</p>
+        {/* print all artworks belonging to this user */}
       </div>
     );
   }

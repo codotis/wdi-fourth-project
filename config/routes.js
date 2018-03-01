@@ -7,12 +7,12 @@ const auth  = require('../controllers/auth');
 
 router.route('/artworks')
   .get(artworks.index)
-  .post(secureRoute, artworks.create);
+  .post(artworks.create);
 
 router.route('/artworks/:id')
   .get(artworks.show)
-  .put(secureRoute, artworks.update)
-  .delete(secureRoute, artworks.delete);
+  .put(artworks.update)
+  .delete(artworks.delete);
 
 router.route('/users/:id')
   .get(users.show);

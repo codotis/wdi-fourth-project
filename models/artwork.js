@@ -8,6 +8,7 @@ const artworkSchema = mongoose.Schema({
   createdBy: { type: mongoose.Schema.ObjectId, ref: 'User'}
 });
 
+
 artworkSchema.set('toJSON', {
   getters: true,
   virtuals: true,
@@ -17,4 +18,4 @@ artworkSchema.set('toJSON', {
   }
 });
 
-module.exports = mongoose.model('artwork', artworkSchema);
+module.exports = mongoose.model('Artwork', artworkSchema);
