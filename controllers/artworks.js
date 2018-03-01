@@ -9,6 +9,7 @@ function artworksIndex(req, res, next) {
 }
 
 function artworksCreate(req, res, next) {
+  req.body.createdBy = req.currentUser;
   Artwork
     .create(req.body)
     .then(artwork => res.status(201).json(artwork))

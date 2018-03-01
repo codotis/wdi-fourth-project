@@ -7,7 +7,7 @@ const auth  = require('../controllers/auth');
 
 router.route('/artworks')
   .get(artworks.index)
-  .post(artworks.create);
+  .post(secureRoute, artworks.create);
 
 router.route('/artworks/:id')
   .get(artworks.show)

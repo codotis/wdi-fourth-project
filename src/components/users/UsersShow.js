@@ -5,7 +5,7 @@ import Axios from 'axios';
 class UsersShow extends Component {
 
   state = {
-    user: {}
+    user: ''
   }
 
   componentDidMount() {
@@ -17,12 +17,18 @@ class UsersShow extends Component {
 
   render() {
     return(
-      <div>
+      <section>
         {this.state.user.username}
-        {this.state.user.artworks}
+        {/* {this.state.user.artworks.map(artwork => <div key={artwork.id} className="col-sm-4">
+          <img src={artwork.image}/>
+          <h3>{artwork.title}</h3>
+          <p>{artwork.username}</p>
+          <div>
+          </div>
+        </div>)} */}
+
         <p>test text</p>
-        {/* print all artworks belonging to this user */}
-      </div>
+      </section>
     );
   }
 
