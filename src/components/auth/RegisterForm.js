@@ -1,8 +1,8 @@
 import React from 'react';
 
-const RegisterForm = ({ handleChange, handleSubmit, user }) => {
+const RegisterForm = ({ handleChange, handleSubmit, user, errors }) => {
   return (
-    <form onSubmit={handleSubmit} className="form-center">
+    <form onSubmit={handleSubmit} noValidate className="form-center">
       <div className="form-group">
         <label htmlFor="username">Username:</label>
         <input className="form-control"
@@ -12,6 +12,7 @@ const RegisterForm = ({ handleChange, handleSubmit, user }) => {
           onChange={handleChange}
           value={user.username}
         />
+        {errors.username && <small>{errors.username}</small>}
       </div>
       <div className="form-group">
         <label htmlFor="email">Email:</label>
@@ -22,6 +23,7 @@ const RegisterForm = ({ handleChange, handleSubmit, user }) => {
           onChange={handleChange}
           value={user.email}
         />
+        {errors.email && <small>{errors.email}</small>}
       </div>
       <div className="form-group">
         <label htmlFor="password">Password:</label>
@@ -32,6 +34,7 @@ const RegisterForm = ({ handleChange, handleSubmit, user }) => {
           onChange={handleChange}
           value={user.password}
         />
+        {errors.password && <small>{errors.password}</small>}
       </div>
       <div className="form-group">
         <label htmlFor="password">Re-enter password:</label>
@@ -42,6 +45,7 @@ const RegisterForm = ({ handleChange, handleSubmit, user }) => {
           onChange={handleChange}
           value={user.passwordConfirmation}
         />
+        {errors.passwordConfirmation && <small>{errors.passwordConfirmation}</small>}
       </div>
 
       <button className="btn btn-primary center-block">Register</button>

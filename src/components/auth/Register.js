@@ -12,7 +12,8 @@ class Register extends Component {
       email: '',
       password: '',
       passwordConfirmation: ''
-    }
+    },
+    errors: {}
   };
 
   handleChange = ({ target: { name, value }}) => {
@@ -28,7 +29,7 @@ class Register extends Component {
         Auth.setToken(res.data.token); //moves token from api into local storage
         this.props.history.push('/');
       })
-      .catch(err => console.log(err));
+      .catch(err => this.setState({ errors: err.response.data.errors }));
   }
 
   render() {
@@ -37,6 +38,7 @@ class Register extends Component {
         user={this.state.user}
         handleChange={this.handleChange}
         handleSubmit={this.handleSubmit}
+        errors={this.state.errors}
       />
     );
   }
