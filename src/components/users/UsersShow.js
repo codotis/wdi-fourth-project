@@ -20,17 +20,20 @@ class UsersShow extends Component {
 
 
     return(
-      <section>
-        {this.state.user.username}
-        {this.state.user.username && this.state.user.artworks.map(artwork => <div key={artwork.id} className="col-sm-4">
-          <img src={artwork.image}/>
-          <h3>{artwork.title}</h3>
-          <p>{artwork.description}</p>
-          <p>{artwork.price}</p>
-        </div>)}
+      <div className="container">
+        {this.state.user.username && this.state.user.artworks.map(artwork => <div key={artwork.id} className="row">
+          <div className="col-md-6">
+            <img className="profile-images" src={artwork.image}/>
+          </div>
 
-        <p>test text</p>
-      </section>
+          <div className="col-md-6">
+            <h3>{artwork.title}</h3>
+            <p>{artwork.description}</p>
+            <p>{artwork.price}</p>
+          </div>
+
+        </div>)}
+      </div>
     );
   }
 

@@ -24,7 +24,6 @@ class App extends Component {
         <main>
           <Navbar/>
           <Link to="/" className="title"><h1>ArtHub</h1></Link>
-          <Link to="/new">New Artwork</Link>
           <Route exact path="/" component={ArtworksIndex} />
           <Route path="/artworks/:id" component={ArtworksShow} />
           <Route path="/new" component={ArtworksNew} />

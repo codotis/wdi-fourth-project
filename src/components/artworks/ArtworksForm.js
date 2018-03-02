@@ -2,10 +2,11 @@ import React from 'react';
 
 const ArtworksForm = ({ artwork, handleChange, handleSubmit }) => {
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="name">Title:</label>
-        <input type="text"
+    <form onSubmit={handleSubmit} className="form-center">
+      <div className="form-group">
+        <label htmlFor="title">Title:</label>
+        <input className="form-control"
+          type="text"
           id="title"
           name="title"
           placeholder="Title of artwork"
@@ -13,9 +14,10 @@ const ArtworksForm = ({ artwork, handleChange, handleSubmit }) => {
           onChange={handleChange}
         />
       </div>
-      <div>
-        <label htmlFor="location">Image:</label>
-        <input type="text"
+      <div className="form-group">
+        <label htmlFor="image">Image:</label>
+        <input className="form-control"
+          type="text"
           id="image"
           name="image"
           placeholder="Image of artwork"
@@ -23,9 +25,10 @@ const ArtworksForm = ({ artwork, handleChange, handleSubmit }) => {
           onChange={handleChange}
         />
       </div>
-      <div>
-        <label htmlFor="location">Price:</label>
-        <input type="text"
+      <div className="form-group">
+        <label htmlFor="price">Price:</label>
+        <input className="form-control"
+          type="text"
           id="price"
           name="price"
           placeholder="Price of artwork"
@@ -33,9 +36,10 @@ const ArtworksForm = ({ artwork, handleChange, handleSubmit }) => {
           onChange={handleChange}
         />
       </div>
-      <div>
-        <label htmlFor="location">Description:</label>
-        <input type="text"
+      <div className="form-group">
+        <label htmlFor="description">Description:</label>
+        <input className="form-control"
+          type="text"
           id="description"
           name="description"
           placeholder="Description of artwork"
@@ -44,7 +48,7 @@ const ArtworksForm = ({ artwork, handleChange, handleSubmit }) => {
         />
       </div>
       <div>
-        <button>Submit</button>
+        <button className="btn btn-primary center-block">Submit</button>
       </div>
     </form>
   );

@@ -13,12 +13,21 @@ const Navbar = ({ history }) => {
   }
 
   return(
-    <nav>
-      {!Auth.isAuthenticated() && <Link to="/login" className="standard-button">Login</Link>}
-      {' '}
-      {!Auth.isAuthenticated() && <Link to="/register" className="standard-button">Register</Link>}
-      {' '}
-      {Auth.isAuthenticated() && <a href="#" className="standard-button" onClick={logout}>Logout</a>}
+    <nav className="navbar navbar-light bg-light">
+      {!Auth.isAuthenticated() && <Link to="/login" className="navbar-brand">Login</Link>}
+
+      {!Auth.isAuthenticated() && <Link to="/register" className="navbar-brand">Register</Link>}
+
+      {Auth.isAuthenticated() &&  <Link to="/new" className="navbar-brand">New Artwork</Link>}
+
+      {Auth.isAuthenticated() && <a href="#" className="navbar-brand" onClick={logout}>Logout</a>}
+
+
+      <form className="form-inline my-2 my-lg-0">
+        <button className="btn btn-outline-success navbar-right my-2 my-sm-0" type="submit">Search</button>
+        <input className="form-control navbar-right mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+      </form>
+
     </nav>
   );
 };

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import Auth from '../../lib/Auth';
+import { Link } from 'react-router-dom';
 
 class ArtworksShow extends Component {
   state = {
@@ -11,7 +12,7 @@ class ArtworksShow extends Component {
     console.log(Auth.getPayload());
     Axios
       .get(`/api/artworks/${this.props.match.params.id}`)
-      .then(res => this.setState({ artwork: res.data}))
+      .then(res => this.setState({ artwork: res.data}, console.log(res.data)))
       .catch(err => console.log(err));
   }
 
@@ -20,9 +21,17 @@ class ArtworksShow extends Component {
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            <img src={this.state.artwork.image}/>
-            <h3>{this.state.artwork.title}</h3>
-            <h4>Description: {this.state.artwork.description}</h4>
+            <img className="show-img" src={this.state.artwork.image}/>
+            <h3 className="show-title">{this.state.artwork.title}</h3>
+
+            <Link to={`/users/:${this.state.artwork.createdBy}`}>
+              <h3>{this.state.artwork.title}</h3>
+            </Link>
+
+
+
+
+            <h4 className="show-description">Description: {this.state.artwork.description}</h4>
           </div>
           <div className="col-md-3">
           </div>
