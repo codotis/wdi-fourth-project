@@ -1,8 +1,8 @@
 import React from 'react';
 
-const ArtworksForm = ({ artwork, handleChange, handleSubmit }) => {
+const ArtworksForm = ({ artwork, handleChange, handleSubmit, errors }) => {
   return (
-    <form onSubmit={handleSubmit} className="form-center">
+    <form onSubmit={handleSubmit} noValidate className="form-center">
       <div className="form-group">
         <label htmlFor="title">Title:</label>
         <input className="form-control"
@@ -13,6 +13,7 @@ const ArtworksForm = ({ artwork, handleChange, handleSubmit }) => {
           value={artwork.title}
           onChange={handleChange}
         />
+        {errors.title && <small>{errors.title}</small>}
       </div>
       <div className="form-group">
         <label htmlFor="image">Image:</label>
@@ -24,6 +25,7 @@ const ArtworksForm = ({ artwork, handleChange, handleSubmit }) => {
           value={artwork.image}
           onChange={handleChange}
         />
+        {errors.image && <small>{errors.image}</small>}
       </div>
       <div className="form-group">
         <label htmlFor="price">Price:</label>
@@ -35,6 +37,7 @@ const ArtworksForm = ({ artwork, handleChange, handleSubmit }) => {
           value={artwork.price}
           onChange={handleChange}
         />
+        {errors.price && <small>{errors.price}</small>}
       </div>
       <div className="form-group">
         <label htmlFor="description">Description:</label>
@@ -46,6 +49,7 @@ const ArtworksForm = ({ artwork, handleChange, handleSubmit }) => {
           value={artwork.description}
           onChange={handleChange}
         />
+        {errors.description && <small>{errors.description}</small>}
       </div>
       <div>
         <button className="btn btn-primary center-block">Submit</button>

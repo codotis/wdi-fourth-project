@@ -24,12 +24,9 @@ class ArtworksShow extends Component {
             <img className="show-img" src={this.state.artwork.image}/>
             <h3 className="show-title">{this.state.artwork.title}</h3>
 
-            <Link to={`/users/:${this.state.artwork.createdBy}`}>
+            <Link to={`/users/${this.state.artwork.createdBy}`}>
               <h3>{this.state.artwork.title}</h3>
             </Link>
-
-
-
 
             <h4 className="show-description">Description: {this.state.artwork.description}</h4>
           </div>

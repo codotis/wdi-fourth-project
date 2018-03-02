@@ -12,7 +12,8 @@ class ArtworksNew extends React.Component {
       image: '',
       price: '',
       description: ''
-    }
+    },
+    errors: {}
   }
 
   handleChange = (e) => {
@@ -26,16 +27,16 @@ class ArtworksNew extends React.Component {
       headers: { 'Authorization': 'Bearer ' + Auth.getToken() }
     })
       .then(() => this.props.history.push('/'))
-      //push created artwork into logged in users 'artwork' array?
-      .catch((err) => console.log(err));
+      .catch(err => this.setState({ errors: err.response.data.errors }));
   }
 
   render() {
     return (
       <ArtworksForm
-        artwork={this.state.artwork}
         handleChange={this.handleChange}
         handleSubmit={this.handleSubmit}
+        artwork={this.state.artwork}
+        errors={this.state.errors}
       />
     );
   }

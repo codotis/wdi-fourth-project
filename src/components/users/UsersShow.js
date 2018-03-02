@@ -15,6 +15,8 @@ class UsersShow extends Component {
       .catch(err => console.log(err));
   }
 
+  // delete function to delete individual uploads
+
   render() {
     console.log('jsx was rendered');
 
