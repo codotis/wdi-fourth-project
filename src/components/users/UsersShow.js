@@ -27,7 +27,6 @@ class UsersShow extends Component {
           <div className="col-md-6">
             <img className="profile-images" src={artwork.image}/>
           </div>
-
           <div className="col-md-6">
             <h3>{artwork.title}</h3>
             <p>{artwork.description}</p>

@@ -28,7 +28,7 @@ class ArtworksShow extends Component {
               <h3>{this.state.artwork.title}</h3>
             </Link>
 
-            <h4 className="show-description">Description: {this.state.artwork.description}</h4>
+            {/* <h4 className="show-description">Description: {this.state.artwork.description}</h4> */}
           </div>
           <div className="col-md-3">
           </div>

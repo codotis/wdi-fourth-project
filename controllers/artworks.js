@@ -3,6 +3,7 @@ const Artwork = require('../models/artwork');
 function artworksIndex(req, res, next) {
   Artwork
     .find()
+    .populate('createdBy')
     .exec()
     .then(artworks => res.json(artworks))
     .catch(next);
