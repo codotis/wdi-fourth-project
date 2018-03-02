@@ -15,8 +15,15 @@ class UsersShow extends Component {
       .catch(err => console.log(err));
   }
 
-  // delete function to delete individual uploads
-
+  deleteArtwork = ({ id }) => {
+    Axios.delete(`/api/artworks/${id}`)
+      .then(() => {
+        this.setState(prevState => {
+          const artworks = prevState.artwork.filter(artwork => artwork.id !== id );
+          return { artworks };
+        });
+      });
+  }
   render() {
     console.log('jsx was rendered');
 
