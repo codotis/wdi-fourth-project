@@ -16,9 +16,10 @@ class ArtworksNew extends React.Component {
     errors: {}
   }
 
-  handleChange = (e) => {
-    const artwork = Object.assign({}, this.state.artwork, {[e.target.name]: e.target.value});
-    this.setState({ artwork });
+  handleChange = ({ target: { name, value } }) => {
+    const artwork = Object.assign({}, this.state.artwork, {[name]: value});
+    const errors = Object.assign({}, this.state.errors, { [name]: '' });
+    this.setState({ artwork, errors });
   }
 
   handleSubmit = (e) => {
