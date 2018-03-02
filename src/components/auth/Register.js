@@ -18,7 +18,8 @@ class Register extends Component {
 
   handleChange = ({ target: { name, value }}) => {
     const user = Object.assign({}, this.state.user, { [name]: value });
-    this.setState({ user });
+    const errors = Object.assign({}, this.state.errors, { [name]: '' });
+    this.setState({ user, errors });
   }
 
   handleSubmit = (e) => {

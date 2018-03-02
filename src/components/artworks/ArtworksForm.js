@@ -1,6 +1,9 @@
 import React from 'react';
 
 const ArtworksForm = ({ artwork, handleChange, handleSubmit, errors }) => {
+
+  const formInvalid = Object.keys(errors).some(key => errors[key]);
+
   return (
     <form onSubmit={handleSubmit} noValidate className="form-center">
       <div className="form-group">
@@ -52,7 +55,7 @@ const ArtworksForm = ({ artwork, handleChange, handleSubmit, errors }) => {
         {errors.description && <small>{errors.description}</small>}
       </div>
       <div>
-        <button className="btn btn-primary center-block">Submit</button>
+        <button disabled={formInvalid} className="btn btn-primary center-block">Submit</button>
       </div>
     </form>
   );
