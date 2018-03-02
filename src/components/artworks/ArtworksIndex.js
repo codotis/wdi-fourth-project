@@ -22,7 +22,7 @@ class ArtworksIndex extends Component {
         <div className="row">
           {this.state.artworks.map(artwork => <div key={artwork.id} className="col-sm-4">
             <div className="card">
-              <img src={artwork.image}/>
+              <img className="index-img" src={artwork.image}/>
               <Link to={`/artworks/${artwork.id}`}>
                 <h3 className="card">{artwork.title}</h3>
               </Link>

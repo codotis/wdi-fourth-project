@@ -25,7 +25,8 @@ class UsersShow extends Component {
         {this.state.user.username && this.state.user.artworks.map(artwork => <div key={artwork.id} className="col-sm-4">
           <img src={artwork.image}/>
           <h3>{artwork.title}</h3>
-          <p>{artwork.desription}</p>
+          <p>{artwork.description}</p>
+          <p>{artwork.price}</p>
         </div>)}
 
         <p>test text</p>
