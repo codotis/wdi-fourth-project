@@ -23,7 +23,7 @@ class App extends Component {
       <Router>
         <main>
           <Navbar/>
-          <Link to="/" className="title"><h1>ArtHub</h1></Link>
+          <Link to="/"><h1 className="title">ArtHub</h1></Link>
           <Route exact path="/" component={ArtworksIndex} />
           <Route path="/artworks/:id" component={ArtworksShow} />
           <Route path="/new" component={ArtworksNew} />

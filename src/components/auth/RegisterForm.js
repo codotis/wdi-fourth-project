@@ -1,6 +1,9 @@
 import React from 'react';
 
 const RegisterForm = ({ handleChange, handleSubmit, user, errors }) => {
+
+  const formInvalid = Object.keys(errors).some(key => errors[key]);
+
   return (
     <form onSubmit={handleSubmit} noValidate className="form-center">
       <div className="form-group">
@@ -48,7 +51,7 @@ const RegisterForm = ({ handleChange, handleSubmit, user, errors }) => {
         {errors.passwordConfirmation && <small>{errors.passwordConfirmation}</small>}
       </div>
 
-      <button className="btn btn-primary center-block">Register</button>
+      <button disabled={formInvalid} className="btn btn-primary center-block">Register</button>
     </form>
   );
 };

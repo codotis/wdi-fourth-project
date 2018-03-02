@@ -24,7 +24,7 @@ class ArtworksIndex extends Component {
             <div className="card">
               <img className="index-img" src={artwork.image}/>
               <Link to={`/artworks/${artwork.id}`}>
-                <h3 className="card">{artwork.title}</h3>
+                <h3>{artwork.title}</h3>
               </Link>
             </div>
             <div>
