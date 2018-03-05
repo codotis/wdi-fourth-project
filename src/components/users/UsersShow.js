@@ -37,9 +37,11 @@ class UsersShow extends Component {
             <img className="profile-images" src={artwork.image}/>
           </div>
           <div className="col-md-6">
+          <div className="artwork-show-bkgrnd">
             <h3 className="profile-title">{artwork.title}</h3>
-            <p className="profile-desc">{artwork.description}</p>
             <p className="profile-price">Price: {artwork.price}</p>
+          </div>
+            <p className="profile-desc">{artwork.description}</p>
           </div>
 
         </div>)}

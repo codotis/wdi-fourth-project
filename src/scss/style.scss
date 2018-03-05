@@ -4,6 +4,10 @@
 }
 
 
+a:hover, a:focus {
+  text-decoration: none;
+}
+
 hr.hr-style {
     border: 0;
     height: 1px;
@@ -51,23 +55,27 @@ hr.hr-style {
 }
 
 .profile-images {
-  width: 500px;
-  height: 500px;
+  max-width: 100%;
   margin-bottom: 10px;
   border: 5px solid #22313F;
 }
 
 .profile-title {
   font-size: 30px;
+  font-family: 'Allerta Stencil', sans-serif;
+  background-color: #D6DEFF;
 }
 
 .profile-desc {
   font-size: 18px;
   margin-top: 50px;
+  background-color: #D6DEFF;
 }
 
 .profile-price {
   font-size: 24px;
+  font-family: 'Allerta Stencil', sans-serif;
+  background-color: #D6DEFF;
 }
 
 .card {
@@ -94,5 +102,9 @@ hr.hr-style {
   padding-bottom: 50px;
   padding-top: 50px;
   margin-bottom: 20px;
+  background-color: #D6DEFF;
+}
+
+.artwork-show-bkgrnd {
   background-color: #D6DEFF;
 }

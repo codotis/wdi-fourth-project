@@ -19,10 +19,7 @@ class ArtworksShow extends Component {
   deleteArtwork = ({ id }) => {
     Axios.delete(`/api/artworks/${id}`)
       .then(() => {
-        this.setState(prevState => {
-          const artworks = prevState.artworks.filter(artwork => artwork.id !== id );
-          return { artworks };
-        });
+        this.props.history.push('/');
       });
   }
 
@@ -35,10 +32,6 @@ class ArtworksShow extends Component {
             <h3 className="show-title">{this.state.artwork.title} by <Link to={`/users/${this.state.artwork.createdBy}`}>Artist Profile</Link>
             </h3>
             <button className="delete" onClick={() => this.deleteArtwork(this.state.artwork)}>x</button>
-
-
-
-            {/* <h4 className="show-description">Description: {this.state.artwork.description}</h4> */}
           </div>
           <div className="col-md-3">
           </div>
