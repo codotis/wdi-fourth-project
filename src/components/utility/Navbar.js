@@ -25,7 +25,7 @@ const Navbar = ({ history }) => {
 
       <form className="form-inline my-2 my-lg-0 search-bar">
         <button className="btn btn-outline-success navbar-right my-2 my-sm-0" type="submit">Search</button>
-        <input className="form-control navbar-right mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+        <input className="form-control navbar-right mr-sm-2" type="search" placeholder="Search artwork" aria-label="Search"/>
       </form>
 
     </nav>

@@ -24,7 +24,7 @@ class App extends Component {
         <main>
           <Navbar/>
           <hr className="hr-style"/>
-          <Link to="/"><h1 className="title">ArtHub</h1></Link>
+          <Link to="/"><h1 className="title animated tada">ArtHub</h1></Link>
           <hr className="hr-style"/>
           <Route exact path="/" component={ArtworksIndex} />
           <Route path="/artworks/:id" component={ArtworksShow} />

@@ -20,13 +20,14 @@ class ArtworksIndex extends Component {
     return (
       <div className="container">
         <div className="row">
-          {this.state.artworks.map(artwork => <div key={artwork.id} className="col-sm-4">
+          {this.state.artworks.map(artwork => <div key={artwork.id} className="col-sm-12 col-md-4">
             <div className="card">
-              <img className="index-img" src={artwork.image}/>
               <Link to={`/artworks/${artwork.id}`}>
-                <h3 className="index-title">{artwork.title}</h3>
+                <img className="index-img" src={artwork.image}/>
               </Link>
-              <Link to={`/users/${artwork.createdBy.id}`}>{artwork.createdBy.username}</Link>
+
+              <h3 className="index-title">{artwork.title}</h3>
+              <Link to={`/users/${artwork.createdBy.id}`}>by: {artwork.createdBy.username}</Link>
             </div>
             <div>
             </div>

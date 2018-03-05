@@ -11,7 +11,7 @@ class UsersShow extends Component {
   componentDidMount() {
     Axios
       .get(`/api/users/${this.props.match.params.id}`)
-      .then(res => this.setState({ user: res.data }, console.log(res.data)))
+      .then(res => this.setState({ user: res.data }, console.log('USER SHOW', res.data)))
       .catch(err => console.log(err));
   }
 
@@ -30,14 +30,16 @@ class UsersShow extends Component {
 
     return(
       <div className="container">
+        <div className="profile-owner">{this.state.user.username} - ArtHub Listings <br/> Click here to contact
+        </div>
         {this.state.user.username && this.state.user.artworks.map(artwork => <div key={artwork.id} className="row">
           <div className="col-md-6">
             <img className="profile-images" src={artwork.image}/>
           </div>
           <div className="col-md-6">
-            <h3>{artwork.title}</h3>
-            <p>{artwork.description}</p>
-            <p>{artwork.price}</p>
+            <h3 className="profile-title">{artwork.title}</h3>
+            <p className="profile-desc">{artwork.description}</p>
+            <p className="profile-price">Price: {artwork.price}</p>
           </div>
 
         </div>)}
