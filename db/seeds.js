@@ -13,20 +13,20 @@ User.collection.drop();
 User
   .create([
     {
-      username: 'otis',
+      username: 'Otis',
       email: 'otis@otis.com',
       password: 'password',
       passwordConfirmation: 'password'
     },
     {
-      username: 'rane',
+      username: 'Rane',
       email: 'rane@rane.com',
       password: 'password',
       passwordConfirmation: 'password'
     },
     {
-      username: 'will',
-      email: 'will@will.com',
+      username: 'Bob',
+      email: 'bob@bob.com',
       password: 'password',
       passwordConfirmation: 'password'
     }
@@ -46,13 +46,13 @@ User
         image: 'http://www.idolmag.co.uk/wp-content/uploads/2015/11/grimes2.jpg',
         price: '20.00',
         description: 'A digital drawing of a creature from the depths of my imagination',
-        createdBy: users[0]._id
+        createdBy: users[1]._id
       }, {
         title: 'Superfloat',
         image: 'http://78.media.tumblr.com/d2fd3bc99a83e27f724a14aed515930e/tumblr_ou55g0ZAEC1s24xrxo1_500.jpg',
         price: '20.00',
         description: 'Digital artwork of a groovy spaceship taking off',
-        createdBy: users[0]._id
+        createdBy: users[1]._id
       }, {
         title: 'Fledging',
         image: 'https://www.chesterartsfair.co.uk/wp-content/uploads/2017/06/Chester-Arts-Fair-Artwork-by-James-Buffifant-Heart.jpg',
@@ -64,13 +64,13 @@ User
         image: 'https://i.pinimg.com/736x/fd/60/b3/fd60b329d470ee6a3e5dd6ceeeddca51--african-women-african-art.jpg',
         price: '35.00',
         description: 'A colourful portrait of love',
-        createdBy: users[0]._id
+        createdBy: users[2]._id
       }, {
         title: 'Untitled',
         image: 'https://static1.squarespace.com/static/538d1920e4b0369e0b93e74b/t/53ce0509e4b0e7d8eb426872/1406010634248/nanobit-zelda-link-majoras-mask',
         price: '18.00',
         description: 'Link wearing majoras mask',
-        createdBy: users[0]._id
+        createdBy: users[2]._id
       }]);
   })
   .then(artworks => {

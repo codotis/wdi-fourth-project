@@ -32,11 +32,11 @@ class ArtworksShow extends Component {
         <div className="row">
           <div className="col-md-12">
             <img className="show-img" src={this.state.artwork.image}/>
-            <h3 className="show-title">{this.state.artwork.title}</h3>
+            <h3 className="show-title">{this.state.artwork.title} by <Link to={`/users/${this.state.artwork.createdBy}`}>Artist Profile</Link>
+            </h3>
             <button className="delete" onClick={() => this.deleteArtwork(this.state.artwork)}>x</button>
-            <Link to={`/users/${this.state.artwork.createdBy}`}>
-              <h3>{this.state.artwork.title}</h3>
-            </Link>
+
+
 
             {/* <h4 className="show-description">Description: {this.state.artwork.description}</h4> */}
           </div>
