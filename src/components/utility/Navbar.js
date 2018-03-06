@@ -20,6 +20,8 @@ const Navbar = ({ history }) => {
 
       {Auth.isAuthenticated() &&  <Link to="/new" className="navbar-brand">New Artwork</Link>}
 
+      {Auth.isAuthenticated() &&  <Link to="/messages" className="navbar-brand">Messages</Link>}
+
       {Auth.isAuthenticated() && <a href="#" className="navbar-brand" onClick={logout}>Logout</a>}
 
 

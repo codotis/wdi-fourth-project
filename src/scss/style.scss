@@ -43,8 +43,8 @@ hr.hr-style {
 .title {
   font-family: 'Allerta Stencil', sans-serif;
   text-align: center;
-  margin-bottom: 50px;
-  margin-top: 50px;
+  // margin-bottom: 20px;
+  // margin-top: 20px;
   font-size: 80px;
 }
 
@@ -107,4 +107,9 @@ hr.hr-style {
 
 .artwork-show-bkgrnd {
   background-color: #D6DEFF;
+}
+
+.title-icon {
+  max-width: 15%;
+  max-height: 15%;
 }

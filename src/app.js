@@ -23,7 +23,7 @@ class App extends Component {
         <main>
           <Navbar/>
           <hr className="hr-style"/>
-          <Link to="/"><h1 className="title animated flipInX">ArtHub</h1></Link>
+          <Link to="/"><h1 className="title animated flipInX"><img src="https://i.imgur.com/FCCgIJ2.png" className="title-icon"/>ArtHub<img src="https://i.imgur.com/FCCgIJ2.png" className="title-icon"/></h1></Link>
           <hr className="hr-style"/>
           <Route exact path="/" component={ArtworksIndex} />
           <Route path="/artworks/:id" component={ArtworksShow} />
