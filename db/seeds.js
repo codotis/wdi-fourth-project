@@ -313,7 +313,7 @@ User
         createdBy: users[0]._id
       }, {
         title: 'Flying',
-        image: 'https://i.pinimg.com/736x/98/62/8d/98628d25d4fd061c59737a6641005e17--metropolitan-museum-museum-of-art.jpg',
+        image: 'https://static.wixstatic.com/media/7e2339_2db252eb7c53495583dd65118fbf8e40~mv2_d_2000_2544_s_2.jpg/v1/fill/w_500,h_500,al_c,q_90/file.jpg',
         price: '15.00',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nulla elit, vehicula sed faucibus eu, laoreet eu nulla. Quisque venenatis aliquam sem, non auctor turpis luctus non. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras congue purus et nibh ultricies sollicitudin. Quisque ante ipsum, volutpat non dignissim aliquet, dapibus eu neque. Vivamus vitae lobortis est, a mollis nulla. Pellentesque at bibendum arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nulla elit, vehicula sed faucibus eu, laoreet eu nulla. Quisque venenatis aliquam sem, non auctor turpis luctus non. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras congue purus et nibh ultricies sollicitudin. Quisque ante ipsum, volutpat non dignissim aliquet, dapibus eu neque. Vivamus vitae lobortis est, a mollis nulla. Pellentesque at bibendum arcu.',
         createdBy: users[0]._id
