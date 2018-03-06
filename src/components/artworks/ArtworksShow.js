@@ -27,7 +27,7 @@ class ArtworksShow extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-md-12">
+          <div className="col-sm-12 col-md-12">
             <img className="show-img" src={this.state.artwork.image}/>
             <h3 className="show-title">{this.state.artwork.title} by <Link to={`/users/${this.state.artwork.createdBy}`}>Artist Profile</Link>
             </h3>
